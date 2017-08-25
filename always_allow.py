@@ -53,12 +53,14 @@ msg = {}
 msg['cvmfs_authz_v1'] = {'msgid': 1, 'revision': 0}
 WriteMsg(msg)
 
-ReadMsg()
 
-# Always allow
-msg = {}
-msg['cvmfs_authz_v1'] = {'msgid': 3, 'revision': 0, 'status': 0, 'bearer_token': "aslkdflkasjkldfakljsdfaj"}
-WriteMsg(msg)
+while True:
+    ReadMsg()
+
+    # Always allow
+    msg = {}
+    msg['cvmfs_authz_v1'] = {'msgid': 3, 'revision': 0, 'status': 0, 'bearer_token': "aslkdflkasjkldfakljsdfaj"}
+    WriteMsg(msg)
 
 
 f.close()
